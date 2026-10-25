@@ -1,0 +1,13 @@
+{
+  // Настройки сервера «Дневника похудения» — ТЕСТОВАЯ копия для Cloudflare
+  "name": "dnevnik-test",
+  "main": "worker.js",
+  "compatibility_date": "2025-06-01",
+  "durable_objects": {
+    "bindings": [{ "name": "STORE", "class_name": "DnevnikStore" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DnevnikStore"] }],
+  "triggers": { "crons": ["*/30 * * * *"] },
+  "vars": { "APP_URL": "https://gjznmp6jcj-alt.github.io/Dnevnik-test/" },
+  "observability": { "enabled": true }
+}
